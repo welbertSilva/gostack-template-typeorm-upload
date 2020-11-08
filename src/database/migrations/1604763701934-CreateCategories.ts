@@ -16,7 +16,6 @@ export class CreateCategories1604763701934 implements MigrationInterface {
           {
             name:'title',
             type: 'varchar',
-            isNullable: false,
           },
           {
             name: 'created_at',
@@ -34,8 +33,7 @@ export class CreateCategories1604763701934 implements MigrationInterface {
    }
 
     public async down(queryRunner: QueryRunner): Promise<any> {
-      await queryRunner
-      .dropTable('categories')
+      await queryRunner.dropTable('categories')
     }
 
 }
